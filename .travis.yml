@@ -17,13 +17,17 @@ notifications:
       - jack.sanchez@unmsm.edu.pe
     on_success: always
     on_failure: always
-  deploy:
-  provider: pages
-  skip_cleanup: true
-  keep_history: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist/
-  target_branch: gh-page
-  commit_message: 'Deploy del proyecto :sari'
-  on:
-    branch: master
+
+notifications:
+  slack: mikunaalli:POrr4biM0QUBcNBBfVZUN6Gt
+
+deploy:
+    provider: pages
+    skip_cleanup: true
+    keep_history: true
+    github_token: $GITHUB_TOKEN
+    local_dir: dist/
+    target_branch: gh-page
+    commit_message: 'Deploy del proyecto :sari'
+    on:
+      branch: master

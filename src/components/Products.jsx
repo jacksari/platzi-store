@@ -13,7 +13,7 @@ const Products = (props) => {
 
   return (
     <div className="Products">
-      <h2>Hola mundo</h2>
+      <h2>Hola mundo 123</h2>
       <div className="Products-items">
         {products.map(product => (
           <Product
